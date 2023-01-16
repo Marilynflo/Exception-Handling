@@ -12,15 +12,16 @@ namespace ExceptionAssignment
            
             try
             {
-                string stringNumber;
-                int intNumber;
+                Console.WriteLine("Please enter a number:");
+                int ans = Convert.ToInt32(Console.ReadLine());
+                List<int> myNumbers = new List<int> { 2, 4, 6, 8, };
+                foreach (int myNumber in myNumbers) 
+                {
 
-                Console.WriteLine("Please enter a number");
-                stringNumber = Console.ReadLine();
-                intNumber = Convert.ToInt32(stringNumber);
-
-                Console.WriteLine("Your number divides 2 is {0}", intNumber / 2);
-                Console.ReadLine();
+                    Console.WriteLine(ans/ myNumber);
+                }
+               
+              
             }
             catch (FormatException ex) //Assigning to varibale ex which is a data type format exception
             {
